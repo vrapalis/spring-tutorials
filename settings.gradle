@@ -1,0 +1,3 @@
+rootProject.name = 'backend-tutorials'
+
+include("spring-boot", "spring-boot:graphql-spring-webclient")

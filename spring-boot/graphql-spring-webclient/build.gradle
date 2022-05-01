@@ -1,0 +1,33 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.7' apply false
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation "com.graphql-java-kickstart:graphql-webclient-spring-boot-starter:1.0.0"
+    testImplementation "com.graphql-java-kickstart:graphql-webclient-spring-boot-starter:1.0.0"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
