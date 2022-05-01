@@ -4,6 +4,28 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/../gradle-plugins" name="gradle-plugins">
+                <projects>
+                  <project path="$PROJECT_DIR$/../gradle-plugins" />
+                  <project path="$PROJECT_DIR$/../gradle-plugins/commons-plugin" />
+                  <project path="$PROJECT_DIR$/../gradle-plugins/spring-application-plugin" />
+                  <project path="$PROJECT_DIR$/../gradle-plugins/spring-library-plugin" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/../gradle-platforms" name="gradle-platforms">
+                <projects>
+                  <project path="$PROJECT_DIR$/../gradle-platforms" />
+                  <project path="$PROJECT_DIR$/../gradle-platforms/application-platform" />
+                  <project path="$PROJECT_DIR$/../gradle-platforms/plugin-platform" />
+                  <project path="$PROJECT_DIR$/../gradle-platforms/test-platform" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
@@ -12,7 +34,17 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/spring-boot" />
-            <option value="$PROJECT_DIR$/spring-boot/graphql-spring-webclient" />
+            <option value="$PROJECT_DIR$/spring-boot/application" />
+            <option value="$PROJECT_DIR$/spring-boot/graphql-webclient" />
+            <option value="$PROJECT_DIR$/spring-boot/library" />
+            <option value="$PROJECT_DIR$/../gradle-platforms" />
+            <option value="$PROJECT_DIR$/../gradle-platforms/application-platform" />
+            <option value="$PROJECT_DIR$/../gradle-platforms/plugin-platform" />
+            <option value="$PROJECT_DIR$/../gradle-platforms/test-platform" />
+            <option value="$PROJECT_DIR$/../gradle-plugins" />
+            <option value="$PROJECT_DIR$/../gradle-plugins/commons-plugin" />
+            <option value="$PROJECT_DIR$/../gradle-plugins/spring-application-plugin" />
+            <option value="$PROJECT_DIR$/../gradle-plugins/spring-library-plugin" />
           </set>
         </option>
       </GradleProjectSettings>

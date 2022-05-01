@@ -1,3 +1,19 @@
+pluginManagement {
+    includeBuild("../gradle-plugins")
+}
+
 rootProject.name = 'backend-tutorials'
 
-include("spring-boot", "spring-boot:graphql-spring-webclient")
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+    }
+
+    versionCatalogs {
+        libs {
+            from(files("../gradle-catalogs/libs.versions.toml"))
+        }
+    }
+}
+
+include("spring-boot", "spring-boot:graphql-webclient", "spring-boot:application", "spring-boot:library")

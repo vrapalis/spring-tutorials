@@ -1,0 +1,8 @@
+plugins {
+    id "io.github.vrapalis.gradle.plugins.springbootlibrary"
+}
+
+dependencies {
+    implementation "com.graphql-java-kickstart:graphql-webclient-spring-boot-starter:1.0.0"
+    testImplementation "com.graphql-java-kickstart:graphql-webclient-spring-boot-starter:1.0.0"
+}
