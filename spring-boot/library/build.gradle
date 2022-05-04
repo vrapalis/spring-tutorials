@@ -2,6 +2,7 @@ plugins {
     id "io.github.vrapalis.gradle.plugins.springbootlibrary"
 }
 
+/* TODO USE CATALOGS */
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web"
 }
