@@ -1,10 +1,9 @@
 plugins {
-    id "io.github.vrapalis.gradle.plugins.springbootlibrary"
+    id "io.github.vrapalis.gradle.plugins.docker"
+    id "io.github.vrapalis.gradle.plugins.springbootapplication"
 }
 
-/* TODO USE CATALOGS */
 dependencies {
+    implementation libs.spring.boot.web
     implementation project(":spring-boot:library")
-
-    implementation "org.springframework.boot:spring-boot-starter-web"
 }

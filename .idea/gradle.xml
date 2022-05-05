@@ -11,6 +11,7 @@
                 <projects>
                   <project path="$PROJECT_DIR$/../gradle-plugins" />
                   <project path="$PROJECT_DIR$/../gradle-plugins/commons-plugin" />
+                  <project path="$PROJECT_DIR$/../gradle-plugins/docker-plugin" />
                   <project path="$PROJECT_DIR$/../gradle-plugins/spring-application-plugin" />
                   <project path="$PROJECT_DIR$/../gradle-plugins/spring-library-plugin" />
                 </projects>
@@ -43,6 +44,7 @@
             <option value="$PROJECT_DIR$/../gradle-platforms/test-platform" />
             <option value="$PROJECT_DIR$/../gradle-plugins" />
             <option value="$PROJECT_DIR$/../gradle-plugins/commons-plugin" />
+            <option value="$PROJECT_DIR$/../gradle-plugins/docker-plugin" />
             <option value="$PROJECT_DIR$/../gradle-plugins/spring-application-plugin" />
             <option value="$PROJECT_DIR$/../gradle-plugins/spring-library-plugin" />
           </set>
