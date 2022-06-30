@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:simple_web_app_db
+    username: sa
+    password:
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      schema-locations: classpath*:/data/schema.sql
+      data-locations: classpath*:/data/data.sql

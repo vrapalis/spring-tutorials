@@ -3,6 +3,12 @@ plugins {
     id "io.github.vrapalis.gradle.plugins.springbootapplication"
 }
 
+ext {
+    dockerBaseImage = "openjdk:18-alpine"
+    dockerPorts = [9090, 8080]
+    dockerJvmArgs = ["-Xmx2048m"]
+}
+
 dependencies {
     implementation libs.spring.boot.web
     implementation project(":spring-boot:library")

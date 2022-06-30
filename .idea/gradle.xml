@@ -34,10 +34,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/java" />
+            <option value="$PROJECT_DIR$/java/classes-and-objects" />
             <option value="$PROJECT_DIR$/spring-boot" />
             <option value="$PROJECT_DIR$/spring-boot/application" />
+            <option value="$PROJECT_DIR$/spring-boot/data" />
             <option value="$PROJECT_DIR$/spring-boot/graphql-webclient" />
             <option value="$PROJECT_DIR$/spring-boot/library" />
+            <option value="$PROJECT_DIR$/spring-boot/security" />
+            <option value="$PROJECT_DIR$/spring-boot/security/form" />
+            <option value="$PROJECT_DIR$/spring-boot/security/http-basic" />
+            <option value="$PROJECT_DIR$/spring-boot/security/oauth2" />
+            <option value="$PROJECT_DIR$/spring-boot/security/simple-web-app" />
             <option value="$PROJECT_DIR$/../gradle-platforms" />
             <option value="$PROJECT_DIR$/../gradle-platforms/application-platform" />
             <option value="$PROJECT_DIR$/../gradle-platforms/plugin-platform" />

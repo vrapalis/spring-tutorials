@@ -1,0 +1,8 @@
+# ONLY ADMINS CAN REQUEST
+GET http://localhost:8080/api/admin
+Authorization: Basic mike 123
+###
+
+# ALL USERS CAN REQUEST
+GET http://localhost:8080/api/hello
+###
