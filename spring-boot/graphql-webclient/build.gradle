@@ -1,8 +1,21 @@
 plugins {
-    id "io.github.vrapalis.gradle.plugins.springbootlibrary"
+    id "com.konigsberger.www.gradle-plugins.it-24-academy-spring-boot-application-plugin"
 }
 
-/* TODO USE CATALOGS */
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(19)
+    }
+}
+
 dependencies {
     implementation "com.graphql-java-kickstart:graphql-webclient-spring-boot-starter:1.0.0"
     testImplementation "com.graphql-java-kickstart:graphql-webclient-spring-boot-starter:1.0.0"

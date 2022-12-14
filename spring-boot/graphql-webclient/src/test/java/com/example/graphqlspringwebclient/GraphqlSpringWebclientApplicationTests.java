@@ -3,6 +3,7 @@ package com.example.graphqlspringwebclient;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import graphql.kickstart.spring.webclient.boot.GraphQLWebClient;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import java.util.Map;
 
 @SpringBootTest
+@Disabled // Graphql public api not exposed anymore
 @DisplayName("Graphql group tests")
 class GraphqlSpringWebclientApplicationTests {
 

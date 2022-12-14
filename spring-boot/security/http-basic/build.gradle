@@ -1,8 +1,0 @@
-plugins {
-    id "io.github.vrapalis.gradle.plugins.springbootapplication"
-}
-
-dependencies {
-    implementation libs.spring.boot.web
-    implementation libs.spring.boot.security
-}

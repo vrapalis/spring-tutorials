@@ -1,8 +1,9 @@
 pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
     includeBuild("../gradle-plugins")
 }
-
-rootProject.name = 'backend-tutorials'
 
 dependencyResolutionManagement {
     repositories {
@@ -10,14 +11,17 @@ dependencyResolutionManagement {
     }
 
     versionCatalogs {
-        libs {
-            from(files("../gradle-catalogs/libs.versions.toml"))
+        springLibs {
+            from files("../gradle-catalogs/catalogs/spring-catalog/spring-catalog.toml")
         }
     }
 }
+
+rootProject.name = "spring-tutorials"
+
+includeBuild("../gradle-catalogs")
 
 include("spring-boot", "spring-boot:graphql-webclient", "spring-boot:application", "spring-boot:library",
         "spring-boot:security", "spring-boot:security:http-basic", "spring-boot:security:form",
         "spring-boot:security:simple-web-app", "spring-boot:security:oauth2",
         "spring-boot:data")
-include("java", "java:classes-and-objects")

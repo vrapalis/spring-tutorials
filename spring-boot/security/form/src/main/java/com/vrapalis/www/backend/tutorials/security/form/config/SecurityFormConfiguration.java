@@ -31,8 +31,8 @@ public class SecurityFormConfiguration {
                     });
                 })
                 .authorizeRequests()
-                .mvcMatchers("/admin").hasRole("ADMIN")
-                .mvcMatchers("/home").hasRole("USER")
+                .requestMatchers("/admin").hasRole("ADMIN")
+                .requestMatchers("/home").hasRole("USER")
                 .anyRequest().authenticated()
                 .and().build();
     }

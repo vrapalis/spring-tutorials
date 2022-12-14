@@ -22,7 +22,7 @@ public class SimpleWebAppSecurityConfiguration {
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-                .csrf().ignoringAntMatchers("/h2-console/**")
+                .csrf().ignoringRequestMatchers("/h2-console/**")
                 .and()
                 .formLogin()
                 .defaultSuccessUrl("/home")
@@ -33,10 +33,10 @@ public class SimpleWebAppSecurityConfiguration {
                 .and()
                 .addFilterAfter(endpointCallerLoggerFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeRequests()
-                .mvcMatchers("/products").hasAnyRole("USER")
-                .mvcMatchers("/admin-dashboard").hasRole("ADMIN")
-                .mvcMatchers("/h2-console/**").permitAll()
-                .mvcMatchers("/", "/home").permitAll()
+                .requestMatchers("/products").hasAnyRole("USER")
+                .requestMatchers("/admin-dashboard").hasRole("ADMIN")
+                .requestMatchers("/h2-console/**").permitAll()
+                .requestMatchers("/", "/home").permitAll()
                 .anyRequest().authenticated()
                 .and().build();
     }

@@ -1,8 +1,0 @@
-plugins {
-    id "application"
-    id "io.github.vrapalis.gradle.plugins.commons"
-}
-
-application {
-    mainClass = "com.vrapalis.www.java.classesandobjects.ClassesAndObjectsMain"
-}

@@ -1,13 +1,13 @@
 package com.vrapalis.www.backend.tutorials.security.simplewebapp.domain.authority;
 
 import com.vrapalis.www.backend.tutorials.security.simplewebapp.domain.user.AppUserEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 import lombok.*;
 import org.hibernate.annotations.NaturalId;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
@@ -18,7 +18,6 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
 @Table(name = "authority")
 public class AuthorityEntity implements Serializable {
 
@@ -29,6 +28,7 @@ public class AuthorityEntity implements Serializable {
     private String name;
 
     @ToString.Exclude
+    @Builder.Default
     @ManyToMany(mappedBy = "authorities")
     private Set<AppUserEntity> users = new HashSet<>();
 

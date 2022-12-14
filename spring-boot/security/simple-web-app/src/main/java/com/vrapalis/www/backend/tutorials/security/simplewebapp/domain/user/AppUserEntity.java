@@ -1,10 +1,10 @@
 package com.vrapalis.www.backend.tutorials.security.simplewebapp.domain.user;
 
 import com.vrapalis.www.backend.tutorials.security.simplewebapp.domain.authority.AuthorityEntity;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.NaturalId;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
@@ -15,7 +15,6 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
 @Table(name = "app_user")
 public class AppUserEntity implements Serializable {
 
@@ -26,6 +25,8 @@ public class AppUserEntity implements Serializable {
     private String email;
 
     private String password;
+
+    @Builder.Default
     @ToString.Exclude
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "app_user_has_authority", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "authority_id"))

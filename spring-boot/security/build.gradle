@@ -1,0 +1,20 @@
+plugins {
+    id "com.konigsberger.www.gradle-plugins.it-24-academy-spring-boot-application-plugin" apply false
+}
+
+
+subprojects {
+    apply plugin: "com.konigsberger.www.gradle-plugins.it-24-academy-spring-boot-application-plugin"
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(19)
+        }
+    }
+
+    dependencies {
+        implementation springLibs.web
+        implementation springLibs.security
+        implementation springLibs.thymeleaf
+    }
+}

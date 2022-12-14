@@ -1,15 +1,25 @@
 plugins {
-    id "io.github.vrapalis.gradle.plugins.docker"
-    id "io.github.vrapalis.gradle.plugins.springbootapplication"
+    id "com.konigsberger.www.gradle-plugins.commons-docker-plugin"
+    id "com.konigsberger.www.gradle-plugins.it-24-academy-spring-boot-application-plugin"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(19)
+    }
 }
 
 ext {
+    dockerUrl = ""
+    dockerUserName = ""
+    dockerPassword = ""
+    dockerEmail = ""
     dockerBaseImage = "openjdk:18-alpine"
     dockerPorts = [9090, 8080]
     dockerJvmArgs = ["-Xmx2048m"]
 }
 
 dependencies {
-    implementation libs.spring.boot.web
+    implementation "org.springframework.boot:spring-boot-starter-web"
     implementation project(":spring-boot:library")
 }

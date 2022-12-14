@@ -1,8 +1,15 @@
 plugins {
-    id "io.github.vrapalis.gradle.plugins.springbootlibrary"
+    id "com.konigsberger.www.gradle-plugins.it-24-academy-spring-boot-library-plugin"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(19)
+    }
 }
 
 dependencies {
-    implementation libs.spring.boot.web
+    implementation springLibs.web
+    implementation springLibs.validation
 }
 

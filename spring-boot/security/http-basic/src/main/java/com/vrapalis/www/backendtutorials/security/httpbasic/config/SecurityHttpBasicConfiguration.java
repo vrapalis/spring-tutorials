@@ -25,8 +25,8 @@ public class SecurityHttpBasicConfiguration {
                     httpBasicConfigurer.authenticationEntryPoint(authenticationEntryPoint);
                 })
                 .authorizeRequests()
-                .mvcMatchers("/api/admin").hasRole("ADMIN")
-                .mvcMatchers("/api/hello").permitAll()
+                .requestMatchers("/api/admin").hasRole("ADMIN")
+                .requestMatchers("/api/hello").permitAll()
                 .anyRequest().authenticated()
                 .and().build();
     }
